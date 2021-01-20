@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Row from "./Row";
-import requests from "./request";
+import requests from "./requests";
 import Banner from "./Banner.js";
 function App(props) {
   return (
