@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios from "./axios";
 import "./Row.css";
 import Youtube from "react-youtube";
 
@@ -21,7 +21,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(fetchUrl);
+      console.log("request is", request);
       setMovies(request.data.results);
+
       return request;
     }
     fetchData();

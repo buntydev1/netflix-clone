@@ -1,11 +1,7 @@
 import axios from "axios";
 
-try {
-  var instances = axios.get({
-    baseURL: "https://api.themoviedb.org/3",
-  });
-} catch (e) {
-  console.log("error", e);
-}
+const instance = axios.create({
+  baseURL: "https://api.themoviedb.org/3",
+});
 
-export default instances;
+export default instance;
